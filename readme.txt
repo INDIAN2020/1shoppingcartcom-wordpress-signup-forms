@@ -10,7 +10,7 @@ add a mailing list signup form to your blog
 
 == Description ==
 
-Introducing ‘Signup Forms’ from 1ShoppingCart.com, our first Wordpress plugin: 
+Introducing Signup Forms from 1ShoppingCart.com, our first Wordpress plugin: 
 Designed to simplify the process of adding a mailing list signup form to your blog, 
 Wordpress Signup Forms gives you all the flexibility of our custom forms designed specifically for Wordpress sites. 
 Easy to install and highly customizable from a simple user setup menu, 
@@ -30,18 +30,18 @@ None
 
 == Screenshots ==
 
-1.Setup screenshot 1
-2.Setup screenshot 2
-3.Setup screenshot 3
-4.Setup screenshot 4
-5.Setup screenshot 5
-6.Setup screenshot 6
-7.Setup screenshot 7
-8.Setup screenshot 8
-9.Setup screenshot 9
-10.Setup screenshot 10
-11.Setup screenshot 11
-12.Setup screenshot 12
+1. Setup screenshot 1
+2. Setup screenshot 2
+3. Setup screenshot 3
+4. Setup screenshot 4
+5. Setup screenshot 5
+6. Setup screenshot 6
+7. Setup screenshot 7
+8. Setup screenshot 8
+9. Setup screenshot 9
+10. Setup screenshot 10
+11. Setup screenshot 11
+12. Setup screenshot 12
 
 == Changelog ==
 
