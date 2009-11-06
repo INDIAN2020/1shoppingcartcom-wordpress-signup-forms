@@ -4,7 +4,7 @@ require('../../../wp-blog-header.php');
 ?>
 
 // File Name: oneshop-validation.js.php
-// Version: 1.0.1	01/09/2009
+// Version: 1.0.2	06/11/2009
 // Author: 1shoppingcart.com
 // Author URI: http://1shoppingcart.com
 // Copyright 2009 1shoppingcart.com  (email : support@1shoppingcart.com)
@@ -22,7 +22,7 @@ jQuery(function($) {
                                      required: "<?php echo get_option("oneshop_field_name_Email_validate_message"); ?>",
                                      email: "<?php echo get_option("oneshop_field_name_Email_invalid_message"); ?>"
                             },
-	.				Company: 	"<?php echo get_option("oneshop_field_name_Company_validate_message"); ?>",
+					Company: 	"<?php echo get_option("oneshop_field_name_Company_validate_message"); ?>",
 					Homephone: 	"<?php echo get_option("oneshop_field_name_Homephone_validate_message"); ?>",
 					Workphone: 	"<?php echo get_option("oneshop_field_name_Workphone_validate_message"); ?>",
 					Address1: 	"<?php echo get_option("oneshop_field_name_Address1_validate_message"); ?>",

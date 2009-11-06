@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Custom Forms For 1ShoppingCart.com Accounts
-Version: 1.0.0	03/11/2009
+Version: 1.0.1	06/11/2009
 Plugin URI: http://1shoppingcart.com/
 Description: Add a <a href='http://www.1shoppingcart.com' target='_new'>1ShoppingCart.com</a> Custom Form to your blog. Usage: Goto 'Appearance >> Widgets' and add the '1SC Custom Forms' widget to the sidebar. Then goto 'Signup Form' in the Admin sidbar to setup the form.
 Author: 1shoppingcart.com
@@ -1081,7 +1081,7 @@ foreach($oneshop_fields_array as $oneshop_fields_array_item)
 </form>
 <div class='clear'> </div>
 <div class='footer'>&copy; 2009-<?php echo date("Y"); ?> <a href="http://1shoppingcart.com">1shoppingcart.com</a><br />
-  Version 1.0.0 November 3rd 2009</div>
+  Version 1.0.1 November 6th 2009</div>
 </div>
 <?php
 }
