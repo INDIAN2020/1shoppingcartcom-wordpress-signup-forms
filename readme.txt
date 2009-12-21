@@ -52,3 +52,7 @@ None
 = 1.0.1 =
 
  Validation bug fix
+
+= 1.0.2 =
+
+ Validation bug fix
