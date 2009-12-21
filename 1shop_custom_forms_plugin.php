@@ -1,15 +1,15 @@
 <?php
 /*
 Plugin Name: Custom Forms For 1ShoppingCart.com Accounts
-Version: 1.0.1	06/11/2009
+Version: 1.0.2	12/21/2009
 Plugin URI: http://1shoppingcart.com/
 Description: Add a <a href='http://www.1shoppingcart.com' target='_new'>1ShoppingCart.com</a> Custom Form to your blog. Usage: Goto 'Appearance >> Widgets' and add the '1SC Custom Forms' widget to the sidebar. Then goto 'Signup Form' in the Admin sidbar to setup the form.
 Author: 1shoppingcart.com
 Author URI: http://1shoppingcart.com
 Copyright 2009 1shoppingcart.com  (email : support@1shoppingcart.com)
 */
-/* 
-* Set up options if they do not exist 
+/*
+* Set up options if they do not exist
 */
 
 
@@ -28,7 +28,7 @@ add_option('oneshop_ar3_check');
 add_option('oneshop_ar4_check');
 add_option('oneshop_ar5_check');
 add_option('oneshop_width', '15');
-add_option('oneshop_submit_type', 'button'); // button, text, image 
+add_option('oneshop_submit_type', 'button'); // button, text, image
 add_option('oneshop_submit_button_text', 'Submit');
 add_option('oneshop_submit_image_url', '');
 add_option('oneshop_submit_text', 'Submit');
@@ -177,7 +177,7 @@ echo "<!-- Start of Custom Forms Plugin -->";
 	width: 95%;
 }
 #oneshop_custom_form table,tr,td,th{
-	border: none;	
+	border: none;
 }
 </style>
 
@@ -237,7 +237,7 @@ if(get_option('oneshop_ar4_check') == "true")
 if(get_option('oneshop_ar5_check') == "true")
 {
 	echo "\n<input name='ar' type='hidden' id='ar' value='".get_option('oneshop_ar5')."'>";
-} 
+}
 echo "\n<input name='allowmulti' type='hidden' id='allowmulti' value='0'>";
 echo "\n<div id='oneshop_sidebar_form' style='display:inline;'>";
 echo "\n<table>";
@@ -253,7 +253,7 @@ echo "\n\t</tr>";
 }
 $oneshop_visible_fields = "\n\t<input name='visiblefields' type='hidden' id='visiblefields' value='";
 $oneshop_required_fields = "\n\t<input name='requiredfields' type='hidden' id='requiredfields' value='";
-$oneshop_basic_fields_array = array(	
+$oneshop_basic_fields_array = array(
 								array(	"Name",			'oneshop_field_name_Name_label', 			'oneshop_field_name_Name_required'				),
 							  	array(	"Email1",		'oneshop_field_name_Email_label', 			'oneshop_field_name_Email_required'				),
 							  	array(	"Company",		'oneshop_field_name_Company_label', 		'oneshop_field_name_Company_required'			),
@@ -263,8 +263,8 @@ $oneshop_basic_fields_array = array(
 							  	array(	"Address2",		'oneshop_field_name_Address2_label', 		'oneshop_field_name_Address2_required'			),
 							  	array(	"City",			'oneshop_field_name_City_label', 			'oneshop_field_name_City_required'				),
 							  	array(	"State",		'oneshop_field_name_State_label', 			'oneshop_field_name_State_required'				),
-							  	array(	"Zip",			'oneshop_field_name_Zip_label', 			'oneshop_field_name_Zip_required'				),				  
-							  	array(	"Country",		'oneshop_field_name_Country_label', 		'oneshop_field_name_Country_required'			),				  
+							  	array(	"Zip",			'oneshop_field_name_Zip_label', 			'oneshop_field_name_Zip_required'				),
+							  	array(	"Country",		'oneshop_field_name_Country_label', 		'oneshop_field_name_Country_required'			),
 							  	array(	"Fax",			'oneshop_field_name_Fax_label', 			'oneshop_field_name_Fax_required'				));
 foreach($oneshop_basic_fields_array as $oneshop_fields_array_item)
 {
@@ -278,7 +278,7 @@ foreach($oneshop_basic_fields_array as $oneshop_fields_array_item)
 		{
 			echo "\n\t\t\t<label for='".$oneshop_fields_array_item[0]."'>";
 			echo "\n\t\t\t\t<strong>".get_option($oneshop_fields_array_item[1])."</strong>";
-			echo "\n\t\t\t</label>"; 
+			echo "\n\t\t\t</label>";
 			$this_class = "required";
 		}
 		else
@@ -307,7 +307,7 @@ foreach($oneshop_basic_fields_array as $oneshop_fields_array_item)
 	}
 }
 
-$oneshop_custom_fields_array = array(	
+$oneshop_custom_fields_array = array(
 								array(	"Custom1",		'oneshop_field_name_Custom1_label',			'oneshop_field_name_Custom1_required',	'1',	),
 								array(	"Custom2",		'oneshop_field_name_Custom2_label',			'oneshop_field_name_Custom2_required',	'2',	),
 								array(	"Custom3",		'oneshop_field_name_Custom3_label',			'oneshop_field_name_Custom3_required',	'3',	),
@@ -355,7 +355,7 @@ if(get_option('oneshop_field_name_Custom10_required') == 1 || get_option('onesho
 {
 	echo"<tr><input type='hidden' name='fieldname10' value='".get_option('oneshop_field_name_Custom10_label')."'>\n";
 	if(trim(get_option('oneshop_field_name_Custom10_label')) != "")
-	{ 
+	{
 		echo "<td align='".get_option('oneshop_sidebar_tag_inner_label_align')."' >";
 		if (get_option('oneshop_field_name_Custom10_required') == 2)
 		{
@@ -381,7 +381,7 @@ $oneshop_required_fields .= "'>";
 echo $oneshop_visible_fields;
 echo $oneshop_required_fields;
 echo"\n\t<tr align='center'>";
-echo "\n\t\t<td colspan='2'>"; 
+echo "\n\t\t<td colspan='2'>";
 if(get_option('oneshop_submit_type') == "button")
 {
 	echo "\n\t\t\t<input type='Submit' name='cmdSubmit' value='".get_option('oneshop_submit_button_text')."' />";
@@ -430,7 +430,7 @@ add_action('admin_menu', 'oneshop_admin');
 
 
 // action function for above hook
-function oneshop_admin() 
+function oneshop_admin()
 {
 	// Add a new submenu under Options:
 	add_menu_page('Custom Forms For 1ShoppingCart.com', 'Signup Form', 7, '1shop_custom_forms', 'oneshop_custom_forms_settings');
@@ -596,14 +596,14 @@ else { document.getElementById(id).style.display = "none"; }
 /*-----------------------------------------------------------
     Toggles element's display value
     Input: any number of element id's
-    Output: none 
+    Output: none
     ---------------------------------------------------------*/
 function toggleDisp() {
     for (var i=0;i<arguments.length;i++){
         var d = $(arguments[i]);
-		
+
         if (d.style.display == 'none')
-			
+
             Effect.SlideDown(d);
         else
 			Effect.SlideUp(d);
@@ -621,16 +621,16 @@ theDoc = parent.frames[theObj.substring(p+1)].document;
 theObj = theObj.substring(0,p);
 }
 if(!(foundObj = theDoc[theObj]) && theDoc.all) foundObj = theDoc.all[theObj];
-for (i=0; !foundObj && i < theDoc.forms.length; i++) 
+for (i=0; !foundObj && i < theDoc.forms.length; i++)
 foundObj = theDoc.forms[i][theObj];
-for(i=0; !foundObj && theDoc.layers && i < theDoc.layers.length; i++) 
+for(i=0; !foundObj && theDoc.layers && i < theDoc.layers.length; i++)
 foundObj = findObj(theObj,theDoc.layers[i].document);
 if(!foundObj && document.getElementById) foundObj = document.getElementById(theObj);
 return foundObj;
 }
 // Example: showHideLayers(Layer1,'','show',Layer2,'','hide');
 function showHideLayers()
-{ 
+{
 var i, visStr, obj, args = showHideLayers.arguments;
 for (i=0; i<(args.length-2); i+=3)
 {
@@ -686,11 +686,11 @@ function oneshop_pages_list($current) {
 	global $wpdb;
 	$query = "SELECT * FROM $wpdb->posts WHERE (post_type = 'page' AND post_status = 'publish') ORDER BY menu_order";
 	$pages = $wpdb->get_results($query, ARRAY_A);
-	
+
 	$page_list = array();
-	foreach ($pages as $page) {	
+	foreach ($pages as $page) {
 		if($page['ID'] == $current)
-		{	
+		{
 			$selected = " selected";
 		}else{
 			$selected = "";
@@ -820,13 +820,13 @@ ID
           <td><strong>Label Align</strong></td>
           <td><select name="oneshop_sidebar_tag_inner_label_align" size="1">
               <option value="left" <?php if(get_option('oneshop_sidebar_tag_inner_label_align') == 'left'){echo 'selected';}?>/>
-Left 
+Left
               </option>
               <option value="center" <?php if(get_option('oneshop_sidebar_tag_inner_label_align') == 'center'){echo 'selected';}?>/>
-Center 
+Center
               </option>
               <option value="right" <?php if(get_option('oneshop_sidebar_tag_inner_label_align') == 'right'){echo 'selected';}?>/>
-Right 
+Right
               </option>
             </select></td>
           <td>Sets the alignment of the field labels.</td>
@@ -869,19 +869,19 @@ Image&nbsp;&nbsp;
           <td> Align&nbsp;
             <select name="oneshop_sidebar_custom_text_1_align" size="1">
               <option value="none" <?php if(get_option('oneshop_sidebar_custom_text_1_align') == 'none'){echo 'selected';}?>/>
-None 
+None
               </option>
               <option value="left" <?php if(get_option('oneshop_sidebar_custom_text_1_align') == 'left'){echo 'selected';}?>/>
-Left 
+Left
               </option>
               <option value="center" <?php if(get_option('oneshop_sidebar_custom_text_1_align') == 'center'){echo 'selected';}?>/>
-Center 
+Center
               </option>
               <option value="justify" <?php if(get_option('oneshop_sidebar_custom_text_1_align') == 'justify'){echo 'selected';}?>/>
-Justify 
+Justify
               </option>
               <option value="right" <?php if(get_option('oneshop_sidebar_custom_text_1_align') == 'right'){echo 'selected';}?>/>
-Right 
+Right
               </option>
             </select>
             <br />
@@ -894,19 +894,19 @@ Right
           <td> Align&nbsp;
             <select name="oneshop_sidebar_custom_text_2_align" size="1">
               <option value="none" <?php if(get_option('oneshop_sidebar_custom_text_2_align') == 'none'){echo 'selected';}?>/>
-None 
+None
               </option>
               <option value="left" <?php if(get_option('oneshop_sidebar_custom_text_2_align') == 'left'){echo 'selected';}?>/>
-Left 
+Left
               </option>
               <option value="center" <?php if(get_option('oneshop_sidebar_custom_text_2_align') == 'center'){echo 'selected';}?>/>
-Center 
+Center
               </option>
               <option value="justify" <?php if(get_option('oneshop_sidebar_custom_text_2_align') == 'justify'){echo 'selected';}?>/>
-Justify 
+Justify
               </option>
               <option value="right" <?php if(get_option('oneshop_sidebar_custom_text_2_align') == 'right'){echo 'selected';}?>/>
-Right 
+Right
               </option>
             </select>
             <br />
@@ -922,12 +922,12 @@ Right
           <td><strong>Validation Error Field Color</strong></td>
           <td><input type="text" name="oneshop_field_name_Name_missing_field_color" value="<?php echo get_option('oneshop_field_name_Name_missing_field_color'); ?>" style='background-color: <?php echo get_option('oneshop_field_name_Name_missing_field_color'); ?>;'/></td>
           <td>Background color of the field when validation fails.</td>
-        </tr>                        
+        </tr>
         <tr>
           <td><strong>Validation Error Text Color</strong></td>
           <td><input type="text" name="oneshop_field_name_Name_missing_field_text_color" value="<?php echo get_option('oneshop_field_name_Name_missing_field_text_color'); ?>" style='color: <?php echo get_option('oneshop_field_name_Name_missing_field_text_color'); ?>;'/></td>
           <td>Text color of the error text when validation fails.</td>
-        </tr>                
+        </tr>
       </tbody>
     </table>
     <p class="submit">
@@ -959,22 +959,22 @@ Right
             </tfoot>
             <tbody class="" >
               <?php
-$oneshop_fields_array = array(	
-								array(	'Name', 		false), 
+$oneshop_fields_array = array(
+								array(	'Name', 		false),
 								array(	'Email',		false),
-								array(	'Company',		false), 
-								array(	'HomePhone', 	false), 
-								array(	'WorkPhone', 	false), 
-								array(	'Address1', 	false), 
-								array(	'Address2', 	false), 
-								array(	'City', 		false), 
-								array(	'State', 		false), 
-								array(	'Zip', 			false), 
-								array(	'Country', 		false), 
-								array(	'Fax', 			false), 
-								array(	'Custom1', 		true), 
+								array(	'Company',		false),
+								array(	'HomePhone', 	false),
+								array(	'WorkPhone', 	false),
+								array(	'Address1', 	false),
+								array(	'Address2', 	false),
+								array(	'City', 		false),
+								array(	'State', 		false),
+								array(	'Zip', 			false),
+								array(	'Country', 		false),
+								array(	'Fax', 			false),
+								array(	'Custom1', 		true),
 								array(	'Custom2',		true),
-								array(	'Custom3',		true), 
+								array(	'Custom3',		true),
 								array(	'Custom4',		true),
 								array(	'Custom5',		true),
 								array(	'Custom6',		true),
@@ -1015,12 +1015,12 @@ foreach($oneshop_fields_array as $oneshop_fields_array_item)
 	{
 		echo "\n\t\t<br/><input type='text' size='25' maxlength='40' name='oneshop_field_name_Email_invalid_message' value='".get_option('oneshop_field_name_Email_invalid_message')."' />";
 	}
-	
+
 	echo "</td>";
 	echo "\n\t</tr>";
-	
+
 	$oneshop_row_counter++;
-	//this is what will split the fields section into 2 columns. Uncomment 
+	//this is what will split the fields section into 2 columns. Uncomment
 	/* 	if($oneshop_fields_array_item[0] == "Fax")
 		{
 			$oneshop_row_counter++;
@@ -1067,11 +1067,11 @@ foreach($oneshop_fields_array as $oneshop_fields_array_item)
                   <input type="text" size="2" maxlength="2" name="oneshop_field_name_Custom10_rows" value="<?php echo get_option('oneshop_field_name_Custom10_rows'); ?>" />
                   &nbsp;Cols
                   <input type="text" size="2" maxlength="2" name="oneshop_field_name_Custom10_cols" value="<?php echo get_option('oneshop_field_name_Custom10_cols'); ?>" /></td>
-                  <td><input type='text' size='25' maxlength='40' name='oneshop_field_name_Custom10_validate_message' value='<?php echo get_option('oneshop_field_name_Custom10_validate_message'); ?>' /></td> 
+                  <td><input type='text' size='25' maxlength='40' name='oneshop_field_name_Custom10_validate_message' value='<?php echo get_option('oneshop_field_name_Custom10_validate_message'); ?>' /></td>
               </tr>
             </tbody>
           </table></td>
-         
+
       </tr>
     </table>
     <p class="submit">
@@ -1081,7 +1081,7 @@ foreach($oneshop_fields_array as $oneshop_fields_array_item)
 </form>
 <div class='clear'> </div>
 <div class='footer'>&copy; 2009-<?php echo date("Y"); ?> <a href="http://1shoppingcart.com">1shoppingcart.com</a><br />
-  Version 1.0.1 November 6th 2009</div>
+  Version 1.0.2 December 21th 2009</div>
 </div>
 <?php
 }
