@@ -1081,7 +1081,7 @@ foreach($oneshop_fields_array as $oneshop_fields_array_item)
 </form>
 <div class='clear'> </div>
 <div class='footer'>&copy; 2009-<?php echo date("Y"); ?> <a href="http://1shoppingcart.com">1shoppingcart.com</a><br />
-  Version 1.0.2 December 21th 2009</div>
+  Version 1.0.2 December 21st, 2009</div>
 </div>
 <?php
 }
